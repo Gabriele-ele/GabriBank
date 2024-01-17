@@ -1,12 +1,50 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Application.Users.Queries;
+using Domain.Entities;
+using Domain.Interfaces;
+using MediatR;
+using Microsoft.AspNetCore.Mvc;
 
 namespace GabriBank.WebApi.Controllers
 {
-    public class UserController : Controller
+    [ApiController]
+    public class UserController : ControllerBase
     {
-        public IActionResult Index()
+        //private readonly IUserService _userService;
+
+        //public UserController(IUserService userService)
+        //{
+        //    _userService = userService;
+        //}
+
+        private readonly IMediator _mediator;
+
+        public UserController(IMediator mediator)
         {
-            return View();
+            _mediator = mediator;
+        }
+
+        /// <summary>
+        /// Get all users
+        /// </summary>
+        [HttpGet]
+        [Route("user/all")]
+        public async Task<ActionResult<List<User>>> GetAll()
+        {
+            var getUsersQuery = new GetUsersQuery();
+            var users = await _mediator.Send(getUsersQuery);
+            return Ok(users);
+        }
+
+        /// <summary>
+        /// Get user by id
+        /// </summary>
+        [HttpGet]
+        [Route("user/{id}")]
+        public async Task<ActionResult<User>> GetById(int id) 
+        {
+            var getUserById = new GetUserByIdQuery(id);
+            var user = await _mediator.Send(getUserById);
+            return Ok(user);
         }
     }
 }
