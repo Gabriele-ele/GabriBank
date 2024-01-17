@@ -24,7 +24,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure", "Infrastru
 		{C1843D0C-2A30-40CC-8DDE-5EFB28C44142} = {C1843D0C-2A30-40CC-8DDE-5EFB28C44142}
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GabriBank.IntegrationTests", "tests\GabriBank.IntegrationTests\GabriBank.IntegrationTests.csproj", "{BA1773D5-5565-453C-8176-DBC8588132DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GabriBank.IntegrationTests", "tests\GabriBank.IntegrationTests\GabriBank.IntegrationTests.csproj", "{BA1773D5-5565-453C-8176-DBC8588132DF}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{E79198DA-9673-434F-B54B-0D82ECC2B0C0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -52,6 +54,10 @@ Global
 		{BA1773D5-5565-453C-8176-DBC8588132DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA1773D5-5565-453C-8176-DBC8588132DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA1773D5-5565-453C-8176-DBC8588132DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E79198DA-9673-434F-B54B-0D82ECC2B0C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E79198DA-9673-434F-B54B-0D82ECC2B0C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E79198DA-9673-434F-B54B-0D82ECC2B0C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E79198DA-9673-434F-B54B-0D82ECC2B0C0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
@@ -7,7 +7,8 @@
     <InvariantGlobalization>true</InvariantGlobalization>
 	  <GenerateDocumentationFile>true</GenerateDocumentationFile>
 	  <UserSecretsId>e6a1b943-f5de-4c88-b19e-6e114607774d</UserSecretsId>
-	  <DockerDefaultTargetOS>Windows</DockerDefaultTargetOS>
+	  <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+	  <DockerComposeProjectPath>..\docker-compose.dcproj</DockerComposeProjectPath>
   </PropertyGroup>
 
   <ItemGroup>

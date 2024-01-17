@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  gabribank.webapi:
+    image: ${DOCKER_REGISTRY-}gabribankwebapi
+    build:
+      context: .
+      dockerfile: GabriBank.WebApi/Dockerfile
